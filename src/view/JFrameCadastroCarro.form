@@ -43,7 +43,6 @@
                                   <Component id="lblLancamento" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblFabricacao" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblCor" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblNome" min="-2" pref="47" max="-2" attributes="0"/>
                                   <Component id="txtNome" max="32767" attributes="0"/>
                                   <Component id="txtCor" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -53,7 +52,7 @@
                                       <Component id="txtFabricante" min="-2" pref="103" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                       <Component id="lblEstaFuncional" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -87,10 +86,10 @@
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="RdNCirculacao" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Group type="102" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
                                                           <Component id="RdEstaFuncional" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="RdNEstaFuncional" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Component id="lblPermtCirculacao" min="-2" max="-2" attributes="0"/>
@@ -100,8 +99,15 @@
                                       </Group>
                                   </Group>
                                   <Component id="ControlePneu" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblNome" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Component id="jLabelCodigo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabelNumCodigo" min="-2" pref="102" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace pref="75" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="lblPlaca" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtPlaca" max="32767" attributes="0"/>
@@ -124,7 +130,7 @@
                           <Component id="lblQtdBatidas" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="317" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="170" max="32767" attributes="0"/>
+                      <EmptySpace pref="207" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -141,33 +147,47 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblEstaFuncional" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCor" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblChassi" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="RdNEstaFuncional" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="RdEstaFuncional" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelNumCodigo" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtPlaca" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="lblNome" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txtNome" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblCor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblChassi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtCor" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtChassi" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lblPermtCirculacao" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="lblEstaFuncional" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="RdEstaFuncional" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RdNEstaFuncional" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblPermtCirculacao" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
@@ -223,7 +243,7 @@
                               <Component id="txtFabricante" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="11" max="32767" attributes="0"/>
+                              <EmptySpace pref="16" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jRadioButtonQtdPortas2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonQtdportas4" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -233,11 +253,11 @@
                   </Group>
                   <Component id="btnLimpar" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
               <Component id="lblQtdBatidas" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="ControleQtdBatidas" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="9" max="32767" attributes="0"/>
               <Component id="lblDescricao" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="77" max="-2" attributes="0"/>
@@ -422,14 +442,14 @@
     <Component class="javax.swing.JFormattedTextField" name="txtAnoFabricacao">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-          <Format format="##/##/####" subtype="-1" type="5"/>
+          <Format format="####" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="txtAnoLancamento">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-          <Format format="##/##/####" subtype="-1" type="5"/>
+          <Format format="####" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>
@@ -455,6 +475,13 @@
         </Property>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="c&#xf3;digo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelNumCodigo">
     </Component>
   </SubComponents>
 </Form>

@@ -84,11 +84,11 @@ public class CarroDAO {
             sql += "permitida_circulacao = ?, ";
             sql += "quantidade_portas = ?,";
             sql += "quantidade_batidas = ?, ";
-            sql += "ano_fabricacao, ano_lancamento = ?,";
+            sql += "ano_fabricacao = ?,";
+            sql += "ano_lancamento = ?,";
             sql += "tipo_pneu = ?, ";
             sql += "renavam = ?, ";
-            sql += "descricao = ?,";
-            sql += "WHERE id = ?";
+            sql += "descricao = ?)";
 
             try {
 
@@ -121,6 +121,7 @@ public class CarroDAO {
 
             } catch (SQLException sqle) {
                 JOptionPane.showMessageDialog(null, sqle.getMessage());
+                sqle.printStackTrace();
                 System.exit(0);
             } finally {
                 Conexao.desconectar();
