@@ -18,6 +18,7 @@ public class JFrameInicial extends JFrame implements JFrameComportamentosInterfa
 
     private JButton jButtonListaCarros;
     private JButton jButtonCadastroCarro;
+    private JButton jButtonListaCategorias;
 
     public JFrameInicial() {
         criarTela();
@@ -41,18 +42,21 @@ public class JFrameInicial extends JFrame implements JFrameComportamentosInterfa
     public void criarComponentes() {
         jButtonListaCarros = new JButton("Lista de carros");
         jButtonCadastroCarro = new JButton("Cadastro de carros");
+        jButtonListaCategorias = new JButton("Lista de categorias");
     }
 
     @Override
     public void definirLocalizacao() {
         jButtonListaCarros.setBounds(10, 10, 200, 35);
         jButtonCadastroCarro.setBounds(10, 55, 200, 35);
+        jButtonListaCategorias.setBounds(10, 100, 200, 35);
     }
 
     @Override
     public void adicionarComponentes() {
         add(jButtonListaCarros);
         add(jButtonCadastroCarro);
+        add(jButtonListaCategorias);
     }
 
     @Override
@@ -70,6 +74,14 @@ public class JFrameInicial extends JFrame implements JFrameComportamentosInterfa
             @Override
             public void actionPerformed(ActionEvent e) {
                 new JFrameCadastroCarro().setVisible(true);
+            }
+        });
+        
+        jButtonListaCategorias.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new JFrameListaCategorias().setVisible(true);
             }
         });
     }

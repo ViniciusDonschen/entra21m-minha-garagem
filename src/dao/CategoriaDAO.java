@@ -66,14 +66,26 @@ public class CategoriaDAO {
         return codigoAlterado;
     }
     
-    public int excluir(Categoria categoria){
+    public int excluir(int id){
         int codigoExcluido = Utilitarios.NAO_FOI_POSSIVEL_EXCLUIR;
+        String sql  = "DELETE FROM categorias WHERE id = ?";
+        try{
+            PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
+            ps.setInt(1, id);
+            codigoExcluido = ps.executeUpdate();
+        }catch(SQLException sqle){
+            JOptionPane.showMessageDialog(null, sqle.getMessage(),"Erro ao excluir CategoriaDAO",
+                    JOptionPane.ERROR_MESSAGE);
+        }finally{
+            Conexao.desconectar();
+        }
+        
         return codigoExcluido;
     }
     
     public ArrayList<Categoria> retornarListaCategorias(){
         ArrayList<Categoria> categorias = new ArrayList<>();
-        String sql = "SELECT id, nome, descricao \nFROM categorias";
+        String sql = "SELECT id, nome, descricao, ativo \nFROM categorias";
         
         try{
             Statement stmt = Conexao.conectar().createStatement();
@@ -99,6 +111,30 @@ public class CategoriaDAO {
     
     public Categoria buscarCategoriaPorId(int codigo){
         Categoria categoria = null;
+        String sql = "SELECT nome, descricao, ativo FROM categorias";
+        sql += "WHERE id = ?";
+        
+        try{
+          PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
+          ps.setInt(1, codigo);
+          ps.execute();
+          ResultSet resultado = ps.getResultSet();
+          if(resultado.next()){
+              categoria = new Categoria();
+              categoria.setId(codigo);
+              categoria.setNome(resultado.getString("nome"));
+              categoria.setDescricao(resultado.getString("descricao"));
+              categoria.setAtivo(resultado.getBoolean("ativo"));
+          }
+        }catch(SQLException sqle){
+            JOptionPane.showMessageDialog(null, sqle.getMessage(),"Não foi possivel retornar"
+                    + "categoria da CategoriaDAO", JOptionPane.ERROR_MESSAGE);
+        }finally{
+            Conexao.desconectar();
+        }
+        
+        
+        
         return categoria;
     }
     
