@@ -26,3 +26,14 @@ CREATE TABLE carros (
 
     descricao TEXT
 );
+
+DROP TABLE IF EXISTS categorias;
+CREATE TABLE IF NOT EXISTS categorias(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(150) UNIQUE NOT NULL,
+    descricao TEXT,
+    ativo BOOLEAN DEFAULT FALSE
+);
+
+
+INSERT INTO categoria (nome) VALUE ("Excecutiva");
